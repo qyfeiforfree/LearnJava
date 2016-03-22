@@ -12,7 +12,7 @@ class DVDPlayer{
 }
 
 public class DVDPlayerTestDrive {
-    public void main(String [] args){
+    public static void main(String [] args){
         DVDPlayer d= new DVDPlayer();
         d.canRecord = true;
         d.playDVD();
