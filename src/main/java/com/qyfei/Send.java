@@ -2,12 +2,14 @@ package com.qyfei;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
+
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.Channel;
 
 public class Send {
     private final static String QUEUE_NAME = "Q_ACCOUNT_INSIDE_NOTIFY_56";
+
     public static void main(String[] argv) throws IOException, TimeoutException {
 
         /* 使用工厂类建立Connection和Channel，并且设置参数 */
