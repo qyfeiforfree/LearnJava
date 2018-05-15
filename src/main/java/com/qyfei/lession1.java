@@ -13,11 +13,11 @@ public class lession1 {
             System.out.println(i);
         }
         int[] a={5,4,2,4,9,1};
-     /*   Arrays.sort(a);  //进行排序
+      Arrays.sort(a);  //进行排序
         for(int i: a){
             System.out.print(i);
         }
-        */
+        
         for(int e =0;e<a.length-1;e++){
             for(int j= e+1;j<a.length;j++){
               if(a[e]<a[j]){
