@@ -1,12 +1,12 @@
 package com.qyfei;
 
 public class TelPhone {
-    float mem = 2.0f;
-    float screen = 5.5f;
-    float cpu = 1.4f;
+    public float mem = 2.0f;
+    public float screen = 5.5f;
+    public float cpu = 1.4f;
 
     public void call() {
-        System.out.println("Telphone cam call");
+        System.out.println("Telphone can call");
     }
 
     public void sendmsg() {
