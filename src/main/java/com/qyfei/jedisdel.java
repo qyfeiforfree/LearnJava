@@ -1,12 +1,9 @@
 package com.qyfei;
 
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisCluster;
 
-import java.util.Map;
 import java.util.Set;
-import java.util.TreeSet;
+
 
 public class jedisdel {
     public static void main(String[] args) {
