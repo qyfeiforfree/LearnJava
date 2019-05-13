@@ -14,7 +14,7 @@ public class testURL {
         System.out.println(imooc.getHost());
         System.out.println(imooc.getPort());
         InputStream is = imooc.openStream();
-        InputStreamReader isr = new InputStreamReader(is,"utf-8");
+        InputStreamReader isr = new InputStreamReader(is, "utf-8");
         BufferedReader br = new BufferedReader(isr);
         String data = br.readLine();
         while (data != null) {
