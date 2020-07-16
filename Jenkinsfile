@@ -1,7 +1,10 @@
 pipeline {
-    agent { docker 'maven:3.3.3' }
+    agent none
     stages {
         stage('build') {
+             agent {
+                docker { image 'maven:3-alpine' }
+            }
             steps {
                 sh 'mvn --version'
             }
