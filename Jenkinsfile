@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Building'
                 whoami
-                echo $PATH
+            
                  sh 'mvn -B -DskipTests clean package'
             }
         }
