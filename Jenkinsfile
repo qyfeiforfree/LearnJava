@@ -1,6 +1,11 @@
 pipeline {
-     agent { docker 'maven:3.6.3' }
+     agent { docker any }
     stages {
+         stage('Example'){
+              steps{
+                   echo "Running ${env.BUILD_NUMBER} on ${env.JENKINS_URL}"
+              }
+         }
         stage('Build') {
             steps {
                 echo 'Building'
