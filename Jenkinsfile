@@ -1,6 +1,15 @@
 pipeline {
-     agent docker
+     agent any
     stages {
+         stage('init') {
+           steps {
+            script{
+              def dockerPath = tool 'docker' r
+              env.PATH = "${dockerPath}/bin:${env.PATH}" 
+            }
+           }
+    }
+
          stage('Example'){
               steps{
                    echo "Running ${env.BUILD_NUMBER} on ${env.JENKINS_URL}"
@@ -12,6 +21,7 @@ pipeline {
             steps {
                 echo 'Building'
                  sh 'mvn -B -DskipTests clean package'
+                 sh 'docker --version'
             }
         }
         stage('Test') {
