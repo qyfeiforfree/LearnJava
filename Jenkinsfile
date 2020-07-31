@@ -30,7 +30,7 @@ pipeline {
      post{
           always{
           //junit testResults: "**/target/sure-reports/*.xml"
-               
+             echo "building is finish!"  
           }
      }
 }
