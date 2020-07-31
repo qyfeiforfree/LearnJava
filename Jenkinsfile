@@ -29,7 +29,8 @@ pipeline {
     }
      post{
           always{
-          junit testResults: "**/target/sure-reports/*.xml"
+          //junit testResults: "**/target/sure-reports/*.xml"
+               
           }
      }
 }
