@@ -3,7 +3,8 @@ pipeline {
         def dockerPath = tool 'docker'
         env.PATH = "${dockerPath}/bin:${env.PATH}"
     }
-     agent docker
+    agent { docker 'maven:3.6  .3' }
+    stages {
     stages {
 
 /*
