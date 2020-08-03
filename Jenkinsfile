@@ -1,12 +1,6 @@
 pipeline {
-    script {
-        def dockerPath = tool 'docker'
-        env.PATH = "${dockerPath}/bin:${env.PATH}"
-    }
-    agent { docker 'maven:3.6  .3' }
+    agent any
     stages {
-
-/*
          stage('init') {
            steps {
             script{
@@ -15,9 +9,10 @@ pipeline {
             }
            }
     }
-*/
+
 
         stage('Example') {
+            agent { docker 'maven:3.6.3' }
             steps {
                 echo "Running ${env.BUILD_NUMBER} on ${env.JENKINS_URL}"
                 echo "Running $env.BUILD_NUMBER on $env.JENKINS_URL"
@@ -25,6 +20,7 @@ pipeline {
             }
         }
         stage('Build') {
+            agent { docker 'maven:3.6.3' }
             steps {
                 echo 'Building'
                 sh 'mvn -B -DskipTests clean package'
@@ -32,6 +28,7 @@ pipeline {
             }
         }
         stage('Test') {
+            agent { docker 'maven:3.6.3' }
             steps {
                 echo 'Testing'
                 sh 'mvn test'
@@ -39,6 +36,7 @@ pipeline {
             }
         }
         stage('Deploy') {
+            agent { docker 'maven:3.6.3' }
             steps {
                 echo 'Deploying'
                 sh 'mvn install '
@@ -47,6 +45,7 @@ pipeline {
         }
     }
     post {
+        agent { docker 'maven:3.6.3' }
         always {
             //junit testResults: "**/target/sure-reports/*.xml"
             echo "building is finish!"
