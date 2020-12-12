@@ -1,5 +1,6 @@
 package com.qyfei;
 
+import java.util.Objects;
 import java.util.logging.Logger;
 
 public class Person {
@@ -67,4 +68,13 @@ public class Person {
         this.eyeColor = eyeColor;
         this.gender = gender;
     }
-}
+@Override
+    public boolean equals(Object o){
+        if (o instanceof Person) {
+            Person p = (Person) o;
+            return Objects.equals(this.name, p.name) &&Objects.equals(this.eyeColor,p.eyeColor)&&Objects.equals(this.gender,p.gender)&& this.age == p.age&&this.height==p.height&&this.weight==p.weight;
+        }
+        return false;
+    }
+
+    }

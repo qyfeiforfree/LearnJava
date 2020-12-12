@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    tools{docker ''}
     stages {
         stage('init') {
             steps {
