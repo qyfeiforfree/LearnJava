@@ -1,14 +1,55 @@
 package com.qyfei;
-import java.util.HashSet;
-import java.util.Set;
 
 public class Student {
-    public String id;
-    public String name;
-    public Set courses;
-    public Student(String id,String name){
-        this.id=id;
+    private  Long id;
+    private String name;
+    private boolean gender;
+    private int grade;
+    private int score;
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
-        this.courses= new HashSet();
+    }
+
+
+    public boolean getGender() {
+        return gender;
+    }
+
+    public void setGender(boolean gender) {
+        this.gender = gender;
+    }
+    public int getGrade() {
+        return grade;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+@Override
+    public String toString(){
+    return String.format("{Student: id=%s, name=%s, gender=%s, grade=%d, score=%d}", this.id, this.name, this.gender ? "male" : "female", this.grade, this.score);
     }
 }

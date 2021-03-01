@@ -7,7 +7,7 @@ import java.net.Socket;
 
 public class socketServer {
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(8888);
+        ServerSocket serverSocket = new ServerSocket(18888);
         int count = 0;
         System.out.println("**********服务即将启动***********");
         Socket socket = null;

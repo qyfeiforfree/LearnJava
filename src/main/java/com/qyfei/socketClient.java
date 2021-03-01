@@ -6,7 +6,7 @@ import java.net.Socket;
 
 public class socketClient {
     public static void main(String[] args) throws IOException {
-        Socket socket = new Socket("127.0.0.1", 8888);
+        Socket socket = new Socket("127.0.0.1", 18888);
         OutputStream outputStream = socket.getOutputStream();
         PrintWriter printWriter = new PrintWriter(outputStream);
         printWriter.write("用户名：tony，密码：123465");

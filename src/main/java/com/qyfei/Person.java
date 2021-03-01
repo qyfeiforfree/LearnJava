@@ -12,6 +12,10 @@ public class Person {
     private String eyeColor;
     private String gender;
 
+    public Person() {
+        super();
+    }
+
     public String getName() {
         return name;
     }

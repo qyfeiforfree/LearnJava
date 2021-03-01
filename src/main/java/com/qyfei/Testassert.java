@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.event.EventRecodingLogger;
 
+import javax.annotation.Resource;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,7 +27,7 @@ import java.util.stream.Stream;
 import static java.time.DayOfWeek.*;
 
 public class Testassert {
-
+    @Resource
     static int findMissingNumber(int start, int end, List<Integer> list) {
         List<Integer> lists = new ArrayList<>();
         for (int i = start; i <= end; i++) {
